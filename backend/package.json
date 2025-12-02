@@ -9,8 +9,7 @@
   },
   "engines": {
     "node": ">=14.0.0"
-  }
-}
+  },
   "keywords": ["rental", "property", "booking"],
   "author": "",
   "license": "MIT",
@@ -25,3 +24,4 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
+}
