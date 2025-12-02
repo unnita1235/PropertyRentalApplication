@@ -1,5 +1,29 @@
 Property Rental Platform
 A full-stack web application for property rental management with role-based access control, booking workflows, and payment tracking.
+# Property Rental Platform
+
+## 🚀 Quick Access
+
+| Resource | Link |
+|----------|------|
+| **🌐 Live Application** | [https://propertyrentalapplication.onrender.com](https://propertyrentalapplication.onrender.com) |
+| **📂 GitHub Repository** | [https://github.com/unnita1235/PropertyRentalApplication](https://github.com/unnita1235/PropertyRentalApplication) |
+| **📖 API Documentation** | Scroll to [API Documentation](#-api-documentation) |
+
+### 🔑 Sample Credentials
+- **Owner:** `owner@example.com` / `owner123`
+- **Customer:** `customer@example.com` / `customer123`
+
+> ⚠️ **First Load Notice:** App may take 30-60 seconds to wake up from sleep (Render free tier).
+
+---
+
+A full-stack web application for property rental management with role-based access control, booking workflows, and payment tracking.
+
+---
+
+📋 Table of Contents
+
 
 📋 Table of Contents
 Features
