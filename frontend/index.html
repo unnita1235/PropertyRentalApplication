@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Rental Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">🏠 Property Rental</div>
+            <div id="nav-links" class="nav-links"></div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Login/Register Section -->
+        <div id="auth-section" class="section active">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="showTab('login')">Login</button>
+                    <button class="tab-btn" onclick="showTab('register')">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="login-form" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <form onsubmit="handleLogin(event)">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <div class="sample-credentials">
+                        <p><strong>Sample Accounts:</strong></p>
+                        <p>Owner: owner@example.com / owner123</p>
+                        <p>Customer: customer@example.com / customer123</p>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div id="register-form" class="auth-form">
+                    <h2>Create Account</h2>
+                    <form onsubmit="handleRegister(event)">
+                        <input type="text" id="reg-name" placeholder="Full Name" required>
+                        <input type="email" id="reg-email" placeholder="Email" required>
+                        <input type="tel" id="reg-phone" placeholder="Phone (optional)">
+                        <input type="password" id="reg-password" placeholder="Password (min 6 chars)" required minlength="6">
+                        <select id="reg-role" required>
+                            <option value="">Select Role</option>
+                            <option value="Owner">Owner (Landlord)</option>
+                            <option value="Customer">Customer (Renter)</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard-section" class="section">
+            <h1 id="dashboard-title">Dashboard</h1>
+            
+            <!-- Owner Dashboard -->
+            <div id="owner-dashboard">
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary" onclick="showCreateProperty()">+ Add New Property</button>
+                    <button class="btn btn-secondary" onclick="loadMyProperties()">My Properties</button>
+                    <button class="btn btn-secondary" onclick="loadBookings()">Booking Requests</button>
+                </div>
+                <div id="owner-content"></div>
+            </div>
+
+            <!-- Customer Dashboard -->
+            <div id="customer-dashboard">
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary" onclick="loadProperties()">Browse Properties</button>
+                    <button class="btn btn-secondary" onclick="loadMyBookings()">My Bookings</button>
+                    <button class="btn btn-secondary" onclick="loadMyPayments()">My Payments</button>
+                </div>
+                <div id="customer-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
