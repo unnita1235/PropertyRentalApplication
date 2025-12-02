@@ -2,10 +2,13 @@
   "name": "property-rental-application",
   "version": "1.0.0",
   "description": "Property Rental Platform",
-  "main": "backend/server.js",
+  "main": "server.js", 
   "scripts": {
-    "start": "cd backend && npm install && npm start",
-    "build": "cd backend && npm install"
+    "start": "node server.js", 
+    "build": "npm install" 
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "engines": {
     "node": ">=14.0.0"
